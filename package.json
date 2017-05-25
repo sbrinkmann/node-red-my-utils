@@ -1,0 +1,24 @@
+{
+  "name": "node-red-my-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "node-red": {
+    "nodes": {
+      "time-utils": "time-utils.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "gogs@brinkmann.io:node-red/node-red-my-utils.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "moment-range": "^3.0.3"
+  }
+}

@@ -1,0 +1,24 @@
+<script type="text/x-red" data-template-name="not-between">
+    <div class="form-row">
+        <label for="node-input-from"><i class="fa fa-clock-o"></i> <span>From</span></label>
+        <input type="text" id="node-input-from" placeholder="00:00" pattern="([01]?[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}">
+    </div>
+    <div class="form-row">
+        <label for="node-input-until"><i class="fa fa-clock-o"></i> <span>Until</span></label>
+        <input type="text" id="node-input-until" placeholder="23:59" pattern="([01]?[0-9]{1}|2[0-3]{1}):[0-5]{1}[0-9]{1}">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span>Name</span></label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/javascript">
+	RED.nodes.registerType('not-between', {
+		defaults: {
+			name: {required: false}, from: {required: true}, until: {required: true}
+		}, label: function() {
+			return this.name ? this.name : "Not Between";
+		}, category: 'function', color: '#e6e0f8', inputs: 1, outputs: 1, icon: "timer.png"
+	});
+</script>
