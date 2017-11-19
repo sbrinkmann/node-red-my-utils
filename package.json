@@ -8,7 +8,8 @@
   },
   "node-red": {
     "nodes": {
-      "time-utils": "time-utils.js"
+      "time-utils": "time-utils.js",
+      "request-utils": "request-utils.js"
     }
   },
   "repository": {
@@ -18,7 +19,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "delay": "^2.0.0",
     "moment": "^2.18.1",
-    "moment-range": "^3.0.3"
+    "moment-range": "^3.0.3",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
   }
 }

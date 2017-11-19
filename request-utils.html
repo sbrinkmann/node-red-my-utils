@@ -1,0 +1,32 @@
+<script type="text/x-red" data-template-name="comes-available">
+    <div class="form-row">
+        <label for="node-input-url"><i class="fa fa-globe"></i> <span>URL</span></label>
+        <input type="text" id="node-input-url" placeholder="http://google.de" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}(\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*))?">
+    </div>
+    <div class="form-row">
+        <label for="node-input-timoutPerRequest"><i class="fa fa-clock-o"></i> <span>Timout per Request (in sec)</span></label>
+        <input type="text" id="node-input-timoutPerRequest" placeholder="10" pattern="">
+    </div>
+    <div class="form-row">
+        <label for="node-input-completeTimout"><i class="fa fa-clock-o"></i> <span>Complete Timout (in sec)</span></label>
+        <input type="text" id="node-input-completeTimout" placeholder="600" pattern="">
+    </div>
+    <div class="form-row">
+        <label for="node-input-successStatusCode"><i class="fa fa-clock-o"></i> <span>Success Status Code</span></label>
+        <input type="text" id="node-input-successStatusCode" placeholder="200" pattern="">
+    </div>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('comes-available', {
+        defaults: {
+            name: {required: false},
+            url: {required: true},
+            timoutPerRequest: {required: true, value: 10},
+            completeTimout: {required: true, value: 600},
+            successStatusCode: {required: true, value: 200}
+        }, label: function() {
+            return this.name ? this.name : "Comes Available";
+        }, category: 'function', color: 'rgb(231, 231, 174)', inputs: 1, outputs: 2, icon: "white-globe.png"
+    });
+</script>
