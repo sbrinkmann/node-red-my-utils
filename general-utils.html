@@ -1,0 +1,16 @@
+<script type="text/x-red" data-template-name="toggle">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span>Name</span></label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/javascript">
+	RED.nodes.registerType('toggle', {
+		defaults: {
+			name: {required: false}
+		}, label: function() {
+			return this.name ? this.name : "Toggle";
+		}, category: 'function', color: '#e6e0f8', inputs: 1, outputs: 2, icon: "trigger.png"
+	});
+</script>
